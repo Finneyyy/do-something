@@ -1,0 +1,30 @@
+Kali Linux - Web Scanners
+
+###
+
+DIRB - Scans for existing and/or web objects (folders/directories)
+Usage: dirb http://website.com/bla
+
+Full Guide: https://www.hackingarticles.in/comprehensive-guide-to-dirb-tool/ 
+
+###
+
+DirBuster - Java application for bruteforcing directories and filenames on web servers
+Usage: dirbuster
+
+Full guide: https://www.hackingarticles.in/comprehensive-guide-on-dirbuster-tool/
+
+###
+
+Wfuzz - Bruteforces web applications and finds resources not linked (e.g: directories, servlets, scripts)
+Usage: wfuzz http://website.com/bla
+
+Common Params:
+-c = output with colour
+-W [wordlist] = wordlist
+--hc = hides responses with specified code/lines/words/characters
+
+Documentation here: https://tools.kali.org/web-applications/wfuzz
+
+###
+

