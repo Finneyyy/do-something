@@ -20,6 +20,7 @@ lineShort = "============================="
 
 homeDirectory = os.environ['HOME']
 
+
 ##############################################################################################################
 
 def banner():
@@ -37,11 +38,13 @@ def error():
     print(lineMedium)
     time.sleep(2)
 
+
 #############################################################################################################
 
 def exit():
     print("Thanks for using me!")
     sys.exit(0)
+
 
 #############################################################################################################
 
@@ -49,33 +52,39 @@ def lists():
     # Just a placeholder to figure out how to open text files
     exit()
 
+
 #############################################################################################################
 
 def main():
     while True:
         option = menu()
         if option == "1":
-            exec("scripts/mac_changer.py")
+            exec("/scripts/mac_changer.py")
         elif option == "2":
-            exec("scripts/meta_sploit.py")
+            exec("/scripts/meta_sploit.py")
         elif option == "3":
-            exec("scripts/network_scanner.py")
+            exec("/scripts/network_scanner.py")
         elif option == "4":
-            exec("scripts/packet_sniffer.py")
+            exec("/scripts/packet_sniffer.py")
         elif option == "5":
-            exec("scripts/python_reverse_tcp_shell.py")
+            exec("/scripts/python_reverse_tcp_shell.py")
         elif option == "6":
-            exec("spawn_tty_shell")
+            exec("/scripts/spawn_tty_shell.py")
         elif option == "10":
-            open("notes/dns-notes")
+            file = open("notes/dns-notes.txt")
+            print(file.read())
         elif option == "11":
-            open("notes/http_scanners")
+            file = open("notes/http_scanners.txt")
+            print(file.read())
         elif option == "12":
-            open("notes/netcat_commands")
+            file = open("notes/netcat_commands.txt")
+            print(file.read())
         elif option == "13":
-            open("notes/linux_priv_esc_notes")
+            file = open("notes/linux_priv_esc_notes.txt")
+            print(file.read())
         elif option == "14":
-            open("notes/windows_priv_esc_notes")
+            file = open("notes/windows_priv_esc_notes.txt")
+            print(file.read())
         elif option == "85":
             exec("scripts/windows_stuff/sweep_pass.bat")
         elif option == "99":
@@ -84,6 +93,7 @@ def main():
         else:
             error()
 
+
 #############################################################################################################
 
 def menu():
@@ -91,8 +101,8 @@ def menu():
     banner()
 
     # Create Folder if one does not exist
-    if not os.path.exists(homeDirectory+"/do_something/data"):
-        os.makedirs(homeDirectory+"/do_something/data")
+    if not os.path.exists(homeDirectory + "/do_something/data"):
+        os.makedirs(homeDirectory + "/do_something/data")
 
     print("Spoofers")
     print("1. Mac Changer")
@@ -126,5 +136,7 @@ def menu():
     return input("Choice: ")
 
     #############################################################################################################
+
+
 if __name__ == '__main__':
     main()
