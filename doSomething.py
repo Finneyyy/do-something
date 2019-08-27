@@ -17,14 +17,9 @@ import time
 
 
 # Global Variables
-Long="==============================================================================================================================="
-medium="=================================================================="
-short="========================================"
-
-Blue="\033[01;34m{0}\033[00m"             # Bash colour codes
-Red="\033[01;31m{0}\033[00m"
-Yellow="\033[01;33m{0}\033[00m"
-Green="\033[01;32m{0}\033[00m"
+Long="==================================================================================="
+medium="========================================="
+short="====================="
 
 homeDirectory= os.environ['HOME']
 
@@ -41,11 +36,17 @@ def error():
     print("")
     print Green.format(medium)
     print()
-    print Green.format("                *** Invalid choice or entry. ***")
+    print Green.format("         *** Invalid choice or entry. ***")
     print
     print Green.format(medium)
     time.sleep(2)
 
+##############################################################################################################
 
-
-
+def main():
+	while True:
+		option=menu()
+		if option=="1":
+			exec("scripts/network_scanner.py")
+		elif option=="2":
+			exec
