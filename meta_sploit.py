@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import msgpack
-import urllib2
+import urllib3
 import time
 
 # Auth is a boolean indicating if the method requires an auth token
