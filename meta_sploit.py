@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import msgpack
-import urllib2
+import urllib3
 import time
 
 # Auth is a boolean indicating if the method requires an auth token
@@ -88,8 +88,7 @@ class Core_MsfRpc:
                     break
                     return response
 
-        if __name__ == '__main__':
-
+    def main():
             # Read in file of host ip's
             infile = open(HOSTS_FILE, 'r')
             hosts = infile.readlines()
@@ -119,3 +118,5 @@ class Core_MsfRpc:
                 print ("[-] No sessions found")
     # Cleanup
         msfrpc.run(params=['console.destroy'])
+if __name__ == '__main__':
+    main()

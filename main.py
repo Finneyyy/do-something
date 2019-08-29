@@ -35,7 +35,7 @@ def main():
 
     print("Please select the tool you desire.")
     print("[A] MAC Changer\n[B] Network "
-          "Scanner\n[C] ARP Spoofer\n[D] Packet Sniffer\n[E] Metasploit - Python\n[F] Reverse TCP Shell\n[G] TTY Shell\n[H] DNS Notes\n[I] HTTP Scanners Notes\n[J] Netcat Notes\n[K] Linux PrivEsc Notes\n[L] Windows PrivEsc Notes\n[Z] Exit")
+          "Scanner\n[C] ARP Spoofer\n[D] Packet Sniffer\n[E] Metasploit - Not currently working\n[F] Reverse TCP Shell - Not working\n[G] TTY Shell - not working\n[H] DNS Notes\n[I] HTTP Scanners Notes\n[J] Netcat Notes\n[K] Linux PrivEsc Notes\n[L] Windows PrivEsc Notes\n[Z] Exit")
     choice = input("Please choose an option from above: ").upper()
     print("\n")
     if choice == "A":
@@ -50,15 +50,16 @@ def main():
     elif choice == "D":
         import packet_sniffer
         packet_sniffer.main()
-    elif choice == "E":
-        import meta_sploit
-        meta_sploit.main()
-    elif choice == "F":
-        import python_reverse_tcp_shell
-        python_reverse_tcp_shell.main()
-    elif choice == "G":
-        import meta_sploit
-        meta_sploit.main()
+    # Figure out why these don't work - Eoin 29/8/19    
+    #elif choice == "E":
+     #   import meta_sploit
+      #  meta_sploit.main()
+    #elif choice == "F":
+     #   import python_reverse_tcp_shell
+      #  python_reverse_tcp_shell.main()
+   # elif choice == "G":
+    #    import spawn_tty_shell
+     #   spawn_tty_shell.main()
     elif choice == "H":
         file = open("notes/dns-notes.txt")
         print(file.read())
@@ -79,3 +80,5 @@ def main():
     else:
         error()
 
+if __name__ == '__main__':
+    main()
