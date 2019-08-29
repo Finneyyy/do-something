@@ -3,5 +3,5 @@
 ## Author - Eoin Finney
 
 import pty
-
-pty.spawn('/bin/bash')
+def main():
+  pty.spawn('/bin/bash')
