@@ -1,0 +1,7 @@
+Hi! You seem to want to add your custom scripts to the menu? I'm gonna show you exactly how to do just that!
+
+Right, first step. Add your script (whether it be in python or some other language (NOTE: As we made the project in python, we didn't test it against other languages apart from batch))to the /main folder. Your scripts to run on Windows via a shell of some sort goes into the "windows_stuff" folder, whilst all other Linux-based tools will just go into the main folder folder.
+
+After you've done the above, you are going to have to modify the main.py script.
+
+
