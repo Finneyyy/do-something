@@ -2,7 +2,7 @@
 # Created by Eoin Finney & Ciaran Meade
 # Contact info:
 # Eoin   -> B00093420@mytudublin.ie | s0meRand0mDud3@protonmail.com
-# Ciaran -> B000XXXXX@mytudublin.ie
+# Ciaran -> B00086698@mytudublin.ie
 #
 # This tool is designed for use with Kali Linux only. Kali is available here: (https://www.kali.org/)
 #
